@@ -1,0 +1,22 @@
+{
+  "created_at": "2025-10-07T21:50:43Z",
+  "python": "3.12.11",
+  "sklearn": "1.6.1",
+  "artifact_paths": {
+    "preprocess": "preprocess_v1.joblib",
+    "model": "model_lgbm_v1.joblib"
+  },
+  "threshold_f1_valid": 0.3368419126009855,
+  "metrics": {
+    "valid": {
+      "auc_roc": 0.9694193317299948,
+      "pr_auc": 0.9612578500359003,
+      "thr_f1": 0.3368419126009855
+    },
+    "test": {
+      "auc_roc": 0.9706391465717399,
+      "pr_auc": 0.9641206064853876
+    }
+  },
+  "notes": "Checkpoint post 'Elecci\u00f3n de modelo' (sin tuning). Holdout temporal purgado, umbral en VALID."
+}
