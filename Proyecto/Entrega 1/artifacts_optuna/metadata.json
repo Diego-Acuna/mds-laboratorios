@@ -1,0 +1,29 @@
+{
+  "study_best_value_pr_auc_valid": 0.9619611843605684,
+  "best_params": {
+    "num_imputer": "mean",
+    "num_scaler": "robust",
+    "ohe_drop_rare": true,
+    "ohe_min_freq": 0.006036433624037721,
+    "n_estimators": 1643,
+    "learning_rate": 0.039777056643850194,
+    "num_leaves": 110,
+    "max_depth": 12,
+    "min_child_samples": 120,
+    "subsample": 0.6623168268804996,
+    "colsample_bytree": 0.7807362489381748,
+    "reg_alpha": 1.7708247944161823,
+    "reg_lambda": 0.2118610329265618
+  },
+  "threshold_f1_valid": 0.3648499560995123,
+  "metrics": {
+    "valid": {
+      "auc": 0.9699863520191158,
+      "pr_auc": 0.9619611843605684
+    },
+    "test": {
+      "auc": 0.9717748341058835,
+      "pr_auc": 0.9652836812871473
+    }
+  }
+}
