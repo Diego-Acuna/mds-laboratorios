@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/samot/Downloads/Lab8/mlruns/252584985372938927/2dd4f2fb2f9b4526ba994f2c85b329ad/artifacts
+end_time: 1761066413470
+entry_point_name: ''
+experiment_id: '252584985372938927'
+lifecycle_stage: active
+run_id: 2dd4f2fb2f9b4526ba994f2c85b329ad
+run_name: bouncy-horse-352
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761066413394
+status: 4
+tags: []
+user_id: samot

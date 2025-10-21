@@ -1,0 +1,1 @@
+{"trial_number": 14, "valid_f1": 0.4565916398713826, "params": {"max_depth": 9, "learning_rate": 0.05385997820178726, "n_estimators": 275, "subsample": 0.8358969836643264, "colsample_bytree": 0.8363231194086244, "gamma": 2.1427383843262144, "min_child_weight": 3}}

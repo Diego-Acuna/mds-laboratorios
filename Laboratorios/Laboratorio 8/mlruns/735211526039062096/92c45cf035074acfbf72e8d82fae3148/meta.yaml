@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/samot/Downloads/Lab8/mlruns/735211526039062096/92c45cf035074acfbf72e8d82fae3148/artifacts
+end_time: 1761071651806
+entry_point_name: ''
+experiment_id: '735211526039062096'
+lifecycle_stage: active
+run_id: 92c45cf035074acfbf72e8d82fae3148
+run_name: artifacts_and_metadata_20251021_202945
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761071650428
+status: 3
+tags: []
+user_id: samot

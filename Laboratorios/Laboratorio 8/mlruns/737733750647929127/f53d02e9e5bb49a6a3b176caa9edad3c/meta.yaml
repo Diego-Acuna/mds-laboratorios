@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/samot/Downloads/Lab8/mlruns/737733750647929127/f53d02e9e5bb49a6a3b176caa9edad3c/artifacts
+end_time: 1761070009419
+entry_point_name: ''
+experiment_id: '737733750647929127'
+lifecycle_stage: active
+run_id: f53d02e9e5bb49a6a3b176caa9edad3c
+run_name: XGBoost_lr0.214_md11_n334
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761070003972
+status: 3
+tags: []
+user_id: samot

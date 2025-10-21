@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/samot/Downloads/Lab8/mlruns/252584985372938927/ed1df5a509b343f0ad04258f3265c1bc/artifacts
+end_time: 1761066438836
+entry_point_name: ''
+experiment_id: '252584985372938927'
+lifecycle_stage: active
+run_id: ed1df5a509b343f0ad04258f3265c1bc
+run_name: kindly-tern-556
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761066438771
+status: 4
+tags: []
+user_id: samot
