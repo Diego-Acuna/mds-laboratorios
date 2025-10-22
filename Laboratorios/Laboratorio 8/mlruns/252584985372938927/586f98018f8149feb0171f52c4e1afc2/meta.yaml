@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/samot/Downloads/Lab8/mlruns/252584985372938927/586f98018f8149feb0171f52c4e1afc2/artifacts
+end_time: 1761066354324
+entry_point_name: ''
+experiment_id: '252584985372938927'
+lifecycle_stage: active
+run_id: 586f98018f8149feb0171f52c4e1afc2
+run_name: melodic-duck-756
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761066354211
+status: 4
+tags: []
+user_id: samot
