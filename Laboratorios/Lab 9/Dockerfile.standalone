@@ -1,0 +1,28 @@
+FROM python:3.10-slim
+
+# Requisitos del SO (curl) y limpieza
+RUN apt-get update && apt-get install -y --no-install-recommends curl && \
+    rm -rf /var/lib/apt/lists/*
+
+# Variables de entorno de Airflow
+ENV AIRFLOW_HOME=/opt/airflow
+ENV AIRFLOW_VERSION=2.9.2
+ENV PYTHONUNBUFFERED=1
+
+# Instalar Airflow con constraints + librerías del lab
+RUN pip install --no-cache-dir \
+    "apache-airflow[postgres]==${AIRFLOW_VERSION}" \
+    --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-3.10.txt" && \
+    pip install --no-cache-dir numpy==1.26.4 pandas==2.2.2 scikit-learn==1.5.1 joblib==1.4.2 gradio==4.44.0
+
+# Usuario y carpetas
+RUN useradd --create-home --home-dir ${AIRFLOW_HOME} airflow
+USER airflow
+WORKDIR ${AIRFLOW_HOME}
+RUN mkdir -p ${AIRFLOW_HOME}/dags ${AIRFLOW_HOME}/logs ${AIRFLOW_HOME}/plugins
+
+# Exponer UI
+EXPOSE 8080
+
+# Arranque sencillo para demo (SQLite, no producción)
+CMD ["bash", "-lc", "airflow db init && airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com || true; airflow standalone"]

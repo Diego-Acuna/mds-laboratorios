@@ -1,0 +1,20 @@
+[2025-11-05T01:33:55.597+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-05T01:33:56.145+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hiring_dynamic.load_and_merge scheduled__2025-02-05T15:00:00+00:00 [queued]>
+[2025-11-05T01:33:56.238+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hiring_dynamic.load_and_merge scheduled__2025-02-05T15:00:00+00:00 [queued]>
+[2025-11-05T01:33:56.241+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-11-05T01:33:56.483+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_and_merge> on 2025-02-05 15:00:00+00:00
+[2025-11-05T01:33:56.615+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hiring_dynamic', 'load_and_merge', 'scheduled__2025-02-05T15:00:00+00:00', '--job-id', '125', '--raw', '--subdir', 'DAGS_FOLDER/dag_dynamic.py', '--cfg-path', '/tmp/tmp_lx0nnam']
+[2025-11-05T01:33:56.664+0000] {standard_task_runner.py:91} INFO - Job 125: Subtask load_and_merge
+[2025-11-05T01:33:56.755+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=734) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-05T01:33:56.768+0000] {standard_task_runner.py:63} INFO - Started process 866 to run task
+[2025-11-05T01:33:58.873+0000] {task_command.py:426} INFO - Running <TaskInstance: hiring_dynamic.load_and_merge scheduled__2025-02-05T15:00:00+00:00 [running]> on host ddceee407281
+[2025-11-05T01:33:59.511+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='hiring_dynamic' AIRFLOW_CTX_TASK_ID='load_and_merge' AIRFLOW_CTX_EXECUTION_DATE='2025-02-05T15:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-02-05T15:00:00+00:00'
+[2025-11-05T01:33:59.530+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-05T01:34:00.188+0000] {logging_mixin.py:188} INFO - [load_ands_merge] Archivos usados: ['data_2.csv']
+[2025-11-05T01:34:00.192+0000] {logging_mixin.py:188} INFO - [load_ands_merge] Guardado: /opt/***/dags/runs/20250205/preprocessed/merged.csv (shape=(750, 11))
+[2025-11-05T01:34:00.201+0000] {python.py:237} INFO - Done. Returned value was: /opt/***/dags/runs/20250205/preprocessed/merged.csv
+[2025-11-05T01:34:00.205+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-05T01:34:00.456+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=hiring_dynamic, task_id=load_and_merge, run_id=scheduled__2025-02-05T15:00:00+00:00, execution_date=20250205T150000, start_date=20251105T013356, end_date=20251105T013400
+[2025-11-05T01:34:00.810+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-11-05T01:34:01.138+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-11-05T01:34:01.153+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

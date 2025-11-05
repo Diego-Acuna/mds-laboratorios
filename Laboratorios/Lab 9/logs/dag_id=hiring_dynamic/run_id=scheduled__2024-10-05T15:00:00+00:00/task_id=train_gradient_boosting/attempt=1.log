@@ -1,0 +1,21 @@
+[2025-11-05T01:34:53.543+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-05T01:34:53.963+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hiring_dynamic.train_gradient_boosting scheduled__2024-10-05T15:00:00+00:00 [queued]>
+[2025-11-05T01:34:53.979+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hiring_dynamic.train_gradient_boosting scheduled__2024-10-05T15:00:00+00:00 [queued]>
+[2025-11-05T01:34:53.980+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-11-05T01:34:54.017+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): train_gradient_boosting> on 2024-10-05 15:00:00+00:00
+[2025-11-05T01:34:54.065+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hiring_dynamic', 'train_gradient_boosting', 'scheduled__2024-10-05T15:00:00+00:00', '--job-id', '141', '--raw', '--subdir', 'DAGS_FOLDER/dag_dynamic.py', '--cfg-path', '/tmp/tmpwdemedz1']
+[2025-11-05T01:34:54.078+0000] {standard_task_runner.py:91} INFO - Job 141: Subtask train_gradient_boosting
+[2025-11-05T01:34:54.145+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1043) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-05T01:34:54.147+0000] {standard_task_runner.py:63} INFO - Started process 1204 to run task
+[2025-11-05T01:34:55.547+0000] {task_command.py:426} INFO - Running <TaskInstance: hiring_dynamic.train_gradient_boosting scheduled__2024-10-05T15:00:00+00:00 [running]> on host ddceee407281
+[2025-11-05T01:34:57.040+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='hiring_dynamic' AIRFLOW_CTX_TASK_ID='train_gradient_boosting' AIRFLOW_CTX_EXECUTION_DATE='2024-10-05T15:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-05T15:00:00+00:00'
+[2025-11-05T01:34:57.054+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-05T01:34:58.992+0000] {logging_mixin.py:188} INFO - [train_model] Numéricas: ['Age', 'DistanceFromCompany', 'ExperienceYears', 'InterviewScore', 'PersonalityScore', 'PreviousCompanies', 'SkillScore']
+[2025-11-05T01:34:59.012+0000] {logging_mixin.py:188} INFO - [train_model] Categóricas: ['EducationLevel', 'Gender', 'RecruitmentStrategy']
+[2025-11-05T01:35:04.613+0000] {logging_mixin.py:188} INFO - [train_model] Modelo entrenado: GradientBoostingClassifier
+[2025-11-05T01:35:04.785+0000] {logging_mixin.py:188} INFO - [train_model] Guardado en: /opt/***/dags/runs/20241005/models/model_gbc_20251105T013503.joblib
+[2025-11-05T01:35:04.947+0000] {python.py:237} INFO - Done. Returned value was: /opt/***/dags/runs/20241005/models/model_gbc_20251105T013503.joblib
+[2025-11-05T01:35:05.532+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-05T01:35:06.279+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=hiring_dynamic, task_id=train_gradient_boosting, run_id=scheduled__2024-10-05T15:00:00+00:00, execution_date=20241005T150000, start_date=20251105T013453, end_date=20251105T013506
+[2025-11-05T01:35:06.702+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-11-05T01:35:06.834+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

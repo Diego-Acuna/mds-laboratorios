@@ -1,0 +1,63 @@
+[2025-11-04T20:37:42.595+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-04T20:37:42.622+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hiring_linear_pipeline.create_folders manual__2025-11-04T20:37:41.372379+00:00 [queued]>
+[2025-11-04T20:37:42.626+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hiring_linear_pipeline.create_folders manual__2025-11-04T20:37:41.372379+00:00 [queued]>
+[2025-11-04T20:37:42.626+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-11-04T20:37:42.635+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): create_folders> on 2025-11-04 20:37:41.372379+00:00
+[2025-11-04T20:37:42.641+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hiring_linear_pipeline', 'create_folders', 'manual__2025-11-04T20:37:41.372379+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/hiring_dag.py', '--cfg-path', '/tmp/tmp84tgsmdi']
+[2025-11-04T20:37:42.654+0000] {standard_task_runner.py:91} INFO - Job 6: Subtask create_folders
+[2025-11-04T20:37:42.654+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=497) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-04T20:37:42.657+0000] {standard_task_runner.py:63} INFO - Started process 498 to run task
+[2025-11-04T20:37:42.701+0000] {task_command.py:426} INFO - Running <TaskInstance: hiring_linear_pipeline.create_folders manual__2025-11-04T20:37:41.372379+00:00 [running]> on host 5dc60a3f7ab4
+[2025-11-04T20:37:42.764+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='hiring_linear_pipeline' AIRFLOW_CTX_TASK_ID='create_folders' AIRFLOW_CTX_EXECUTION_DATE='2025-11-04T20:37:41.372379+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-04T20:37:41.372379+00:00'
+[2025-11-04T20:37:42.765+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-04T20:37:42.781+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-04T20:37:42.782+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/20251104'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: '/opt/airflow/data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/hiring_functions.py", line 95, in create_folders
+    p.mkdir(parents=True, exist_ok=True)
+  File "/usr/local/lib/python3.12/pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/local/lib/python3.12/pathlib.py", line 1320, in mkdir
+    if not exist_ok or not self.is_dir():
+                           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 875, in is_dir
+    return S_ISDIR(self.stat().st_mode)
+                   ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 840, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 1] Operation not permitted: '/opt/airflow/data'
+[2025-11-04T20:37:42.790+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=hiring_linear_pipeline, task_id=create_folders, run_id=manual__2025-11-04T20:37:41.372379+00:00, execution_date=20251104T203741, start_date=20251104T203742, end_date=20251104T203742
+[2025-11-04T20:37:42.796+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 6 for task create_folders ([Errno 1] Operation not permitted: '/opt/airflow/data'; 498)
+[2025-11-04T20:37:42.803+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-11-04T20:37:42.815+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-04T20:37:42.816+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
