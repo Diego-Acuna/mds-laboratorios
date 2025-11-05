@@ -1,0 +1,25 @@
+[2025-11-05T02:15:55.790+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-05T02:15:55.821+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hiring_dynamic.download_data_1 manual__2025-11-05T02:15:47.240796+00:00 [queued]>
+[2025-11-05T02:15:55.829+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hiring_dynamic.download_data_1 manual__2025-11-05T02:15:47.240796+00:00 [queued]>
+[2025-11-05T02:15:55.830+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-11-05T02:15:55.842+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): download_data_1> on 2025-11-05 02:15:47.240796+00:00
+[2025-11-05T02:15:55.861+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=731) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-05T02:15:55.859+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hiring_dynamic', 'download_data_1', 'manual__2025-11-05T02:15:47.240796+00:00', '--job-id', '196', '--raw', '--subdir', 'DAGS_FOLDER/dag_dynamic.py', '--cfg-path', '/tmp/tmpt2y1e9ef']
+[2025-11-05T02:15:55.862+0000] {standard_task_runner.py:63} INFO - Started process 757 to run task
+[2025-11-05T02:15:55.862+0000] {standard_task_runner.py:91} INFO - Job 196: Subtask download_data_1
+[2025-11-05T02:15:55.901+0000] {task_command.py:426} INFO - Running <TaskInstance: hiring_dynamic.download_data_1 manual__2025-11-05T02:15:47.240796+00:00 [running]> on host 9d96bb82ceeb
+[2025-11-05T02:15:55.991+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='hiring_dynamic' AIRFLOW_CTX_TASK_ID='download_data_1' AIRFLOW_CTX_EXECUTION_DATE='2025-11-05T02:15:47.240796+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-05T02:15:47.240796+00:00'
+[2025-11-05T02:15:55.995+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-05T02:15:56.005+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-05T02:15:56.007+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\nset -euo pipefail\nRAW="/opt/***/dags/runs/20251105/raw"\nmkdir -p "$RAW"\nOUT="$RAW/data_1.csv"\necho "[download_data_1] -> $OUT"\ncurl -fSL --retry 5 --retry-all-errors --retry-delay 5 --connect-timeout 15 --max-time 180 \\\n  -o "$OUT" "https://gitlab.com/eduardomoyab/laboratorio-13/-/raw/main/files/data_1.csv"\ntest -s "$OUT"']
+[2025-11-05T02:15:56.015+0000] {subprocess.py:86} INFO - Output:
+[2025-11-05T02:15:56.018+0000] {subprocess.py:93} INFO - [download_data_1] -> /opt/***/dags/runs/20251105/raw/data_1.csv
+[2025-11-05T02:15:56.039+0000] {subprocess.py:93} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2025-11-05T02:15:56.039+0000] {subprocess.py:93} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2025-11-05T02:15:56.417+0000] {subprocess.py:93} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 32735  100 32735    0     0  86270      0 --:--:-- --:--:-- --:--:-- 86600
+[2025-11-05T02:15:56.422+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-11-05T02:15:56.423+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-05T02:15:56.446+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=hiring_dynamic, task_id=download_data_1, run_id=manual__2025-11-05T02:15:47.240796+00:00, execution_date=20251105T021547, start_date=20251105T021555, end_date=20251105T021556
+[2025-11-05T02:15:56.496+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-11-05T02:15:56.530+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-11-05T02:15:56.531+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

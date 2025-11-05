@@ -1,0 +1,33 @@
+Running on local URL:  http://0.0.0.0:7860
+/home/airflow/.local/lib/python3.12/site-packages/gradio/analytics.py:106: UserWarning: IMPORTANT: You are using gradio version 4.44.0, however version 4.44.1 is available, please upgrade. 
+--------
+  warnings.warn(
+
+Could not create share link. Missing file: /home/airflow/.local/lib/python3.12/site-packages/gradio/frpc_linux_aarch64_v0.2. 
+
+Please check your internet connection. This can happen if your antivirus software blocks the download of this file. You can install manually by following these steps: 
+
+1. Download this file: https://cdn-media.huggingface.co/frpc-gradio-0.2/frpc_linux_aarch64
+2. Rename the downloaded file to: frpc_linux_aarch64_v0.2
+3. Move the file to this location: /home/airflow/.local/lib/python3.12/site-packages/gradio
+[gradio] Lanzado con share=True. Revisa el enlace *.gradio.live en el log.
+[gradio] Ventana activa ~20 min restantes. http://localhost:7860
+[predict] y_hat=[0]
+[gradio] Ventana activa ~19 min restantes. http://localhost:7860
+[gradio] Ventana activa ~18 min restantes. http://localhost:7860
+[gradio] Ventana activa ~17 min restantes. http://localhost:7860
+[gradio] Ventana activa ~16 min restantes. http://localhost:7860
+[gradio] Ventana activa ~15 min restantes. http://localhost:7860
+[gradio] Ventana activa ~14 min restantes. http://localhost:7860
+[gradio] Ventana activa ~13 min restantes. http://localhost:7860
+[gradio] Ventana activa ~12 min restantes. http://localhost:7860
+[gradio] Ventana activa ~11 min restantes. http://localhost:7860
+[gradio] Ventana activa ~10 min restantes. http://localhost:7860
+[gradio] Ventana activa ~9 min restantes. http://localhost:7860
+[gradio] Ventana activa ~8 min restantes. http://localhost:7860
+[gradio] Ventana activa ~7 min restantes. http://localhost:7860
+[gradio] Ventana activa ~6 min restantes. http://localhost:7860
+[gradio] Ventana activa ~5 min restantes. http://localhost:7860
+[gradio] Ventana activa ~4 min restantes. http://localhost:7860
+[gradio] Ventana activa ~3 min restantes. http://localhost:7860
+[gradio] Ventana activa ~2 min restantes. http://localhost:7860

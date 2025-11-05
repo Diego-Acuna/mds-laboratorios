@@ -1,0 +1,24 @@
+[2025-11-05T01:33:55.605+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-05T01:33:56.212+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hiring_dynamic.download_data_1 scheduled__2025-04-05T15:00:00+00:00 [queued]>
+[2025-11-05T01:33:56.280+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hiring_dynamic.download_data_1 scheduled__2025-04-05T15:00:00+00:00 [queued]>
+[2025-11-05T01:33:56.287+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-11-05T01:33:56.357+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): download_data_1> on 2025-04-05 15:00:00+00:00
+[2025-11-05T01:33:56.491+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hiring_dynamic', 'download_data_1', 'scheduled__2025-04-05T15:00:00+00:00', '--job-id', '120', '--raw', '--subdir', 'DAGS_FOLDER/dag_dynamic.py', '--cfg-path', '/tmp/tmpf1sy0005']
+[2025-11-05T01:33:56.608+0000] {standard_task_runner.py:91} INFO - Job 120: Subtask download_data_1
+[2025-11-05T01:33:56.669+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=699) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-05T01:33:56.674+0000] {standard_task_runner.py:63} INFO - Started process 863 to run task
+[2025-11-05T01:33:58.803+0000] {task_command.py:426} INFO - Running <TaskInstance: hiring_dynamic.download_data_1 scheduled__2025-04-05T15:00:00+00:00 [running]> on host ddceee407281
+[2025-11-05T01:33:59.730+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='hiring_dynamic' AIRFLOW_CTX_TASK_ID='download_data_1' AIRFLOW_CTX_EXECUTION_DATE='2025-04-05T15:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-05T15:00:00+00:00'
+[2025-11-05T01:33:59.764+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-05T01:34:00.045+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-05T01:34:00.051+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\nset -euo pipefail\nRAW="/opt/***/dags/runs/20250405/raw"\nmkdir -p "$RAW"\necho "[download_data_1] -> $RAW/data_1.csv"\ncurl -fSL --retry 3 --connect-timeout 10 --max-time 120 \\\n  -o "$RAW/data_1.csv" "https://gitlab.com/eduardomoyab/laboratorio-13/-/raw/main/files/data_1.csv"\ntest -s "$RAW/data_1.csv"']
+[2025-11-05T01:34:00.092+0000] {subprocess.py:86} INFO - Output:
+[2025-11-05T01:34:00.150+0000] {subprocess.py:93} INFO - [download_data_1] -> /opt/***/dags/runs/20250405/raw/data_1.csv
+[2025-11-05T01:34:00.505+0000] {subprocess.py:93} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2025-11-05T01:34:00.531+0000] {subprocess.py:93} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2025-11-05T01:34:00.875+0000] {subprocess.py:93} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 32735  100 32735    0     0  88018      0 --:--:-- --:--:-- --:--:-- 88234
+[2025-11-05T01:34:00.924+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-11-05T01:34:00.953+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-05T01:34:01.171+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=hiring_dynamic, task_id=download_data_1, run_id=scheduled__2025-04-05T15:00:00+00:00, execution_date=20250405T150000, start_date=20251105T013356, end_date=20251105T013401
+[2025-11-05T01:34:01.372+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-11-05T01:34:01.619+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

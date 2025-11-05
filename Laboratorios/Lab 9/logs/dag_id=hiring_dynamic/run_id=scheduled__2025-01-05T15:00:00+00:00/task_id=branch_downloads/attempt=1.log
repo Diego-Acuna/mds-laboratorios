@@ -1,0 +1,21 @@
+[2025-11-05T01:32:52.018+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-05T01:32:52.302+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hiring_dynamic.branch_downloads scheduled__2025-01-05T15:00:00+00:00 [queued]>
+[2025-11-05T01:32:52.338+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hiring_dynamic.branch_downloads scheduled__2025-01-05T15:00:00+00:00 [queued]>
+[2025-11-05T01:32:52.341+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-11-05T01:32:52.417+0000] {taskinstance.py:2330} INFO - Executing <Task(BranchPythonOperator): branch_downloads> on 2025-01-05 15:00:00+00:00
+[2025-11-05T01:32:52.709+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=441) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-05T01:32:52.716+0000] {standard_task_runner.py:63} INFO - Started process 518 to run task
+[2025-11-05T01:32:52.717+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hiring_dynamic', 'branch_downloads', 'scheduled__2025-01-05T15:00:00+00:00', '--job-id', '107', '--raw', '--subdir', 'DAGS_FOLDER/dag_dynamic.py', '--cfg-path', '/tmp/tmpy0zwongi']
+[2025-11-05T01:32:52.787+0000] {standard_task_runner.py:91} INFO - Job 107: Subtask branch_downloads
+[2025-11-05T01:32:53.674+0000] {task_command.py:426} INFO - Running <TaskInstance: hiring_dynamic.branch_downloads scheduled__2025-01-05T15:00:00+00:00 [running]> on host ddceee407281
+[2025-11-05T01:32:54.689+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='hiring_dynamic' AIRFLOW_CTX_TASK_ID='branch_downloads' AIRFLOW_CTX_EXECUTION_DATE='2025-01-05T15:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-05T15:00:00+00:00'
+[2025-11-05T01:32:54.772+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-05T01:32:54.978+0000] {baseoperator.py:400} WARNING - BranchPythonOperator.execute cannot be called outside TaskInstance!
+[2025-11-05T01:32:54.984+0000] {python.py:237} INFO - Done. Returned value was: ['download_data_1', 'download_data_2']
+[2025-11-05T01:32:54.987+0000] {branch.py:36} INFO - Branch into ['download_data_1', 'download_data_2']
+[2025-11-05T01:32:54.991+0000] {skipmixin.py:178} INFO - Following branch ['download_data_1', 'download_data_2']
+[2025-11-05T01:32:55.278+0000] {skipmixin.py:246} INFO - Skipping tasks []
+[2025-11-05T01:32:55.529+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-05T01:32:55.684+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=hiring_dynamic, task_id=branch_downloads, run_id=scheduled__2025-01-05T15:00:00+00:00, execution_date=20250105T150000, start_date=20251105T013252, end_date=20251105T013255
+[2025-11-05T01:32:56.695+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-11-05T01:32:57.413+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

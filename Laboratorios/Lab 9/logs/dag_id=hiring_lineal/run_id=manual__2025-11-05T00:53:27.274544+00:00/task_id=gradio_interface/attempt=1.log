@@ -1,0 +1,70 @@
+[2025-11-05T01:02:19.337+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-05T01:02:19.359+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hiring_lineal.gradio_interface manual__2025-11-05T00:53:27.274544+00:00 [queued]>
+[2025-11-05T01:02:19.365+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hiring_lineal.gradio_interface manual__2025-11-05T00:53:27.274544+00:00 [queued]>
+[2025-11-05T01:02:19.366+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-11-05T01:02:19.391+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): gradio_interface> on 2025-11-05 00:53:27.274544+00:00
+[2025-11-05T01:02:19.415+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hiring_lineal', 'gradio_interface', 'manual__2025-11-05T00:53:27.274544+00:00', '--job-id', '75', '--raw', '--subdir', 'DAGS_FOLDER/dag_lineal.py', '--cfg-path', '/tmp/tmp226bx9bl']
+[2025-11-05T01:02:19.417+0000] {standard_task_runner.py:91} INFO - Job 75: Subtask gradio_interface
+[2025-11-05T01:02:19.417+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=280) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-05T01:02:19.421+0000] {standard_task_runner.py:63} INFO - Started process 290 to run task
+[2025-11-05T01:02:19.500+0000] {task_command.py:426} INFO - Running <TaskInstance: hiring_lineal.gradio_interface manual__2025-11-05T00:53:27.274544+00:00 [running]> on host 67cce8f1dc94
+[2025-11-05T01:02:19.622+0000] {_client.py:1025} INFO - HTTP Request: GET https://api.gradio.app/gradio-messaging/en "HTTP/1.1 200 OK"
+[2025-11-05T01:02:19.683+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='hiring_lineal' AIRFLOW_CTX_TASK_ID='gradio_interface' AIRFLOW_CTX_EXECUTION_DATE='2025-11-05T00:53:27.274544+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-05T00:53:27.274544+00:00'
+[2025-11-05T01:02:19.686+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-05T01:02:20.147+0000] {logging_mixin.py:188} INFO - Running on local URL:  http://0.0.0.0:7860
+[2025-11-05T01:02:20.168+0000] {_client.py:1025} INFO - HTTP Request: GET http://localhost:7860/startup-events "HTTP/1.1 200 OK"
+[2025-11-05T01:02:20.298+0000] {_client.py:1025} INFO - HTTP Request: GET https://checkip.amazonaws.com/ "HTTP/1.1 200 "
+[2025-11-05T01:02:20.694+0000] {_client.py:1025} INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+[2025-11-05T01:02:20.706+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/gradio/analytics.py:106 UserWarning: IMPORTANT: You are using gradio version 4.44.0, however version 4.44.1 is available, please upgrade.
+--------
+[2025-11-05T01:02:21.577+0000] {_client.py:1025} INFO - HTTP Request: HEAD http://localhost:7860/ "HTTP/1.1 200 OK"
+[2025-11-05T01:02:22.786+0000] {_client.py:1025} INFO - HTTP Request: GET https://api.gradio.app/v2/tunnel-request "HTTP/1.1 200 OK"
+[2025-11-05T01:02:23.220+0000] {_client.py:1025} INFO - HTTP Request: GET https://cdn-media.huggingface.co/frpc-gradio-0.2/frpc_linux_aarch64 "HTTP/1.1 403 Forbidden"
+[2025-11-05T01:02:23.230+0000] {logging_mixin.py:188} INFO - 
+Could not create share link. Missing file: /home/***/.local/lib/python3.12/site-packages/gradio/frpc_linux_aarch64_v0.2. 
+
+Please check your internet connection. This can happen if your antivirus software blocks the download of this file. You can install manually by following these steps: 
+
+1. Download this file: https://cdn-media.huggingface.co/frpc-gradio-0.2/frpc_linux_aarch64
+2. Rename the downloaded file to: frpc_linux_aarch64_v0.2
+3. Move the file to this location: /home/***/.local/lib/python3.12/site-packages/gradio
+[2025-11-05T01:02:23.250+0000] {logging_mixin.py:188} INFO - [gradio] Lanzado con share=True. Revisa el enlace *.gradio.live en el log.
+[2025-11-05T01:02:23.255+0000] {logging_mixin.py:188} INFO - [gradio] Ventana activa ~20 min restantes. Visita http://0.0.0.0:7860 o http://localhost:7860
+[2025-11-05T01:03:23.273+0000] {logging_mixin.py:188} INFO - [gradio] Ventana activa ~19 min restantes. Visita http://0.0.0.0:7860 o http://localhost:7860
+[2025-11-05T01:04:23.291+0000] {logging_mixin.py:188} INFO - [gradio] Ventana activa ~18 min restantes. Visita http://0.0.0.0:7860 o http://localhost:7860
+[2025-11-05T01:05:23.311+0000] {logging_mixin.py:188} INFO - [gradio] Ventana activa ~17 min restantes. Visita http://0.0.0.0:7860 o http://localhost:7860
+[2025-11-05T01:06:23.333+0000] {logging_mixin.py:188} INFO - [gradio] Ventana activa ~16 min restantes. Visita http://0.0.0.0:7860 o http://localhost:7860
+[2025-11-05T01:07:23.364+0000] {logging_mixin.py:188} INFO - [gradio] Ventana activa ~15 min restantes. Visita http://0.0.0.0:7860 o http://localhost:7860
+[2025-11-05T01:08:23.389+0000] {logging_mixin.py:188} INFO - [gradio] Ventana activa ~14 min restantes. Visita http://0.0.0.0:7860 o http://localhost:7860
+[2025-11-05T01:08:50.222+0000] {local_task_job_runner.py:124} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-11-05T01:08:50.402+0000] {process_utils.py:132} INFO - Sending 15 to group 290. PIDs of all processes in the group: [290]
+[2025-11-05T01:08:50.408+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 290
+[2025-11-05T01:08:50.422+0000] {taskinstance.py:2611} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-11-05T01:08:50.441+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-05T01:08:50.599+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/dag_lineal.py", line 57, in launch_gradio_blocking_window
+    gradio_task = BashOperator(
+        ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 2613, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-11-05T01:08:50.642+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=hiring_lineal, task_id=gradio_interface, run_id=manual__2025-11-05T00:53:27.274544+00:00, execution_date=20251105T005327, start_date=20251105T010219, end_date=20251105T010850
+[2025-11-05T01:08:50.806+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=290, status='terminated', exitcode=2, started='01:02:18') (290) terminated with exit code 2
+[2025-11-05T01:08:50.818+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 143
+[2025-11-05T01:08:50.968+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check

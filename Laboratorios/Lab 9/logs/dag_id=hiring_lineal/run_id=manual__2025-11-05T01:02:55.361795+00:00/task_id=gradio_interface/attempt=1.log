@@ -1,0 +1,57 @@
+[2025-11-05T01:03:09.180+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-05T01:03:09.204+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hiring_lineal.gradio_interface manual__2025-11-05T01:02:55.361795+00:00 [queued]>
+[2025-11-05T01:03:09.210+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hiring_lineal.gradio_interface manual__2025-11-05T01:02:55.361795+00:00 [queued]>
+[2025-11-05T01:03:09.210+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-11-05T01:03:09.217+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): gradio_interface> on 2025-11-05 01:02:55.361795+00:00
+[2025-11-05T01:03:09.224+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hiring_lineal', 'gradio_interface', 'manual__2025-11-05T01:02:55.361795+00:00', '--job-id', '81', '--raw', '--subdir', 'DAGS_FOLDER/dag_lineal.py', '--cfg-path', '/tmp/tmphism3owm']
+[2025-11-05T01:03:09.226+0000] {standard_task_runner.py:91} INFO - Job 81: Subtask gradio_interface
+[2025-11-05T01:03:09.229+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=410) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-05T01:03:09.229+0000] {standard_task_runner.py:63} INFO - Started process 431 to run task
+[2025-11-05T01:03:09.274+0000] {task_command.py:426} INFO - Running <TaskInstance: hiring_lineal.gradio_interface manual__2025-11-05T01:02:55.361795+00:00 [running]> on host 67cce8f1dc94
+[2025-11-05T01:03:09.338+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='hiring_lineal' AIRFLOW_CTX_TASK_ID='gradio_interface' AIRFLOW_CTX_EXECUTION_DATE='2025-11-05T01:02:55.361795+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-05T01:02:55.361795+00:00'
+[2025-11-05T01:03:09.340+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-05T01:03:09.462+0000] {_client.py:1025} INFO - HTTP Request: GET https://api.gradio.app/gradio-messaging/en "HTTP/1.1 200 OK"
+[2025-11-05T01:03:09.754+0000] {logging_mixin.py:188} INFO - [gradio] No se pudo crear link público (Cannot find empty port in range: 7860-7860. You can specify a different port by setting the GRADIO_SERVER_PORT environment variable or passing the `server_port` parameter to `launch()`.). Sirviendo en URL local: http://0.0.0.0:7860
+[2025-11-05T01:03:09.775+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-05T01:03:09.775+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/dag_lineal.py", line 44, in launch_gradio_blocking_window
+    ui.launch(server_name="0.0.0.0", server_port=GRADIO_PORT,
+  File "/home/airflow/.local/lib/python3.12/site-packages/gradio/blocks.py", line 2372, in launch
+    ) = http_server.start_server(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/gradio/http_server.py", line 154, in start_server
+    raise OSError(
+OSError: Cannot find empty port in range: 7860-7860. You can specify a different port by setting the GRADIO_SERVER_PORT environment variable or passing the `server_port` parameter to `launch()`.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/dag_lineal.py", line 49, in launch_gradio_blocking_window
+    ui.launch(server_name="0.0.0.0", server_port=GRADIO_PORT,
+  File "/home/airflow/.local/lib/python3.12/site-packages/gradio/blocks.py", line 2372, in launch
+    ) = http_server.start_server(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/gradio/http_server.py", line 154, in start_server
+    raise OSError(
+OSError: Cannot find empty port in range: 7860-7860. You can specify a different port by setting the GRADIO_SERVER_PORT environment variable or passing the `server_port` parameter to `launch()`.
+[2025-11-05T01:03:09.789+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=hiring_lineal, task_id=gradio_interface, run_id=manual__2025-11-05T01:02:55.361795+00:00, execution_date=20251105T010255, start_date=20251105T010309, end_date=20251105T010309
+[2025-11-05T01:03:09.802+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 81 for task gradio_interface (Cannot find empty port in range: 7860-7860. You can specify a different port by setting the GRADIO_SERVER_PORT environment variable or passing the `server_port` parameter to `launch()`.; 431)
+[2025-11-05T01:03:09.826+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-11-05T01:03:09.849+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-05T01:03:09.852+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
