@@ -1,0 +1,25 @@
+[2025-11-05T02:02:15.727+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-05T02:02:15.753+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hiring_dynamic.download_data_1 manual__2025-11-05T02:02:10.512799+00:00 [queued]>
+[2025-11-05T02:02:15.762+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hiring_dynamic.download_data_1 manual__2025-11-05T02:02:10.512799+00:00 [queued]>
+[2025-11-05T02:02:15.762+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-11-05T02:02:15.771+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): download_data_1> on 2025-11-05 02:02:10.512799+00:00
+[2025-11-05T02:02:15.786+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=632) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-05T02:02:15.792+0000] {standard_task_runner.py:63} INFO - Started process 658 to run task
+[2025-11-05T02:02:15.796+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hiring_dynamic', 'download_data_1', 'manual__2025-11-05T02:02:10.512799+00:00', '--job-id', '182', '--raw', '--subdir', 'DAGS_FOLDER/dag_dynamic.py', '--cfg-path', '/tmp/tmpbp4_p7tc']
+[2025-11-05T02:02:15.800+0000] {standard_task_runner.py:91} INFO - Job 182: Subtask download_data_1
+[2025-11-05T02:02:15.927+0000] {task_command.py:426} INFO - Running <TaskInstance: hiring_dynamic.download_data_1 manual__2025-11-05T02:02:10.512799+00:00 [running]> on host 9d96bb82ceeb
+[2025-11-05T02:02:16.057+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='hiring_dynamic' AIRFLOW_CTX_TASK_ID='download_data_1' AIRFLOW_CTX_EXECUTION_DATE='2025-11-05T02:02:10.512799+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-05T02:02:10.512799+00:00'
+[2025-11-05T02:02:16.078+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-05T02:02:16.089+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-05T02:02:16.091+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\nset -euo pipefail\nRAW="/opt/***/dags/runs/20251105/raw"\nmkdir -p "$RAW"\nOUT="$RAW/data_1.csv"\necho "[download_data_1] -> $OUT"\n\ncurl -fSL \\\n  --retry 5 \\\n  --retry-all-errors \\\n  --retry-delay 5 \\\n  --connect-timeout 15 \\\n  --max-time 180 \\\n  -o "$OUT" "https://gitlab.com/eduardomoyab/laboratorio-13/-/raw/main/files/data_1.csv"\n\ntest -s "$OUT"']
+[2025-11-05T02:02:16.099+0000] {subprocess.py:86} INFO - Output:
+[2025-11-05T02:02:16.108+0000] {subprocess.py:93} INFO - [download_data_1] -> /opt/***/dags/runs/20251105/raw/data_1.csv
+[2025-11-05T02:02:16.179+0000] {subprocess.py:93} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2025-11-05T02:02:16.180+0000] {subprocess.py:93} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2025-11-05T02:02:16.551+0000] {subprocess.py:93} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 32735  100 32735    0     0  88003      0 --:--:-- --:--:-- --:--:-- 87997100 32735  100 32735    0     0  87994      0 --:--:-- --:--:-- --:--:-- 87997
+[2025-11-05T02:02:16.556+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-11-05T02:02:16.557+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-05T02:02:16.583+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=hiring_dynamic, task_id=download_data_1, run_id=manual__2025-11-05T02:02:10.512799+00:00, execution_date=20251105T020210, start_date=20251105T020215, end_date=20251105T020216
+[2025-11-05T02:02:16.634+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-11-05T02:02:16.666+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-11-05T02:02:16.671+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

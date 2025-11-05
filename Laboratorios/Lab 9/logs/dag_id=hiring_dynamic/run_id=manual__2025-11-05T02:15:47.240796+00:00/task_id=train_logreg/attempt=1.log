@@ -1,0 +1,22 @@
+[2025-11-05T02:16:00.875+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-05T02:16:00.903+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hiring_dynamic.train_logreg manual__2025-11-05T02:15:47.240796+00:00 [queued]>
+[2025-11-05T02:16:00.912+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hiring_dynamic.train_logreg manual__2025-11-05T02:15:47.240796+00:00 [queued]>
+[2025-11-05T02:16:00.913+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-11-05T02:16:00.925+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): train_logreg> on 2025-11-05 02:15:47.240796+00:00
+[2025-11-05T02:16:00.954+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=791) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-05T02:16:00.957+0000] {standard_task_runner.py:63} INFO - Started process 817 to run task
+[2025-11-05T02:16:00.962+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hiring_dynamic', 'train_logreg', 'manual__2025-11-05T02:15:47.240796+00:00', '--job-id', '199', '--raw', '--subdir', 'DAGS_FOLDER/dag_dynamic.py', '--cfg-path', '/tmp/tmp40ztpmvd']
+[2025-11-05T02:16:00.966+0000] {standard_task_runner.py:91} INFO - Job 199: Subtask train_logreg
+[2025-11-05T02:16:01.065+0000] {task_command.py:426} INFO - Running <TaskInstance: hiring_dynamic.train_logreg manual__2025-11-05T02:15:47.240796+00:00 [running]> on host 9d96bb82ceeb
+[2025-11-05T02:16:01.194+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='hiring_dynamic' AIRFLOW_CTX_TASK_ID='train_logreg' AIRFLOW_CTX_EXECUTION_DATE='2025-11-05T02:15:47.240796+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-05T02:15:47.240796+00:00'
+[2025-11-05T02:16:01.196+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-05T02:16:01.251+0000] {logging_mixin.py:188} INFO - [train_model] Numéricas: ['Age', 'DistanceFromCompany', 'ExperienceYears', 'InterviewScore', 'PersonalityScore', 'PreviousCompanies', 'SkillScore']
+[2025-11-05T02:16:01.251+0000] {logging_mixin.py:188} INFO - [train_model] Categóricas: ['EducationLevel', 'Gender', 'RecruitmentStrategy']
+[2025-11-05T02:16:01.702+0000] {logging_mixin.py:188} INFO - [train_model] Modelo entrenado: LogisticRegression
+[2025-11-05T02:16:01.702+0000] {logging_mixin.py:188} INFO - [train_model] Guardado en: /opt/***/dags/runs/20251105/models/model_logreg_20251105T021601.joblib
+[2025-11-05T02:16:01.702+0000] {python.py:237} INFO - Done. Returned value was: /opt/***/dags/runs/20251105/models/model_logreg_20251105T021601.joblib
+[2025-11-05T02:16:01.703+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-05T02:16:01.764+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=hiring_dynamic, task_id=train_logreg, run_id=manual__2025-11-05T02:15:47.240796+00:00, execution_date=20251105T021547, start_date=20251105T021600, end_date=20251105T021601
+[2025-11-05T02:16:01.801+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-11-05T02:16:01.821+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-05T02:16:01.822+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

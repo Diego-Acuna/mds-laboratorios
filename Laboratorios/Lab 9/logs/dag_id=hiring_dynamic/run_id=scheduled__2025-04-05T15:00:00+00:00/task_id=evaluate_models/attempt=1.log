@@ -1,0 +1,23 @@
+[2025-11-05T01:36:08.169+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-05T01:36:08.273+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hiring_dynamic.evaluate_models scheduled__2025-04-05T15:00:00+00:00 [queued]>
+[2025-11-05T01:36:08.303+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hiring_dynamic.evaluate_models scheduled__2025-04-05T15:00:00+00:00 [queued]>
+[2025-11-05T01:36:08.305+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-11-05T01:36:08.361+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): evaluate_models> on 2025-04-05 15:00:00+00:00
+[2025-11-05T01:36:08.416+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hiring_dynamic', 'evaluate_models', 'scheduled__2025-04-05T15:00:00+00:00', '--job-id', '173', '--raw', '--subdir', 'DAGS_FOLDER/dag_dynamic.py', '--cfg-path', '/tmp/tmpli98r3b6']
+[2025-11-05T01:36:08.419+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1546) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-05T01:36:08.427+0000] {standard_task_runner.py:63} INFO - Started process 1591 to run task
+[2025-11-05T01:36:08.425+0000] {standard_task_runner.py:91} INFO - Job 173: Subtask evaluate_models
+[2025-11-05T01:36:08.644+0000] {task_command.py:426} INFO - Running <TaskInstance: hiring_dynamic.evaluate_models scheduled__2025-04-05T15:00:00+00:00 [running]> on host ddceee407281
+[2025-11-05T01:36:08.974+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='hiring_dynamic' AIRFLOW_CTX_TASK_ID='evaluate_models' AIRFLOW_CTX_EXECUTION_DATE='2025-04-05T15:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-05T15:00:00+00:00'
+[2025-11-05T01:36:08.983+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-05T01:36:09.249+0000] {logging_mixin.py:188} INFO - [evaluate_models] model_gbc_20251105T013552.joblib: accuracy=0.9333
+[2025-11-05T01:36:09.265+0000] {logging_mixin.py:188} INFO - [evaluate_models] model_logreg_20251105T013553.joblib: accuracy=0.9067
+[2025-11-05T01:36:09.587+0000] {logging_mixin.py:188} INFO - [evaluate_models] model_random_forest_20251105T013553.joblib: accuracy=0.9333
+[2025-11-05T01:36:09.661+0000] {logging_mixin.py:188} INFO - [evaluate_models] Mejor modelo: model_gbc_20251105T013552.joblib | accuracy=0.9333
+[2025-11-05T01:36:09.664+0000] {logging_mixin.py:188} INFO - [evaluate_models] Guardado como: /opt/***/dags/runs/20250405/models/best_model.joblib
+[2025-11-05T01:36:09.670+0000] {python.py:237} INFO - Done. Returned value was: /opt/***/dags/runs/20250405/models/best_model.joblib
+[2025-11-05T01:36:09.676+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-05T01:36:09.763+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=hiring_dynamic, task_id=evaluate_models, run_id=scheduled__2025-04-05T15:00:00+00:00, execution_date=20250405T150000, start_date=20251105T013608, end_date=20251105T013609
+[2025-11-05T01:36:09.833+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-11-05T01:36:09.901+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-05T01:36:09.905+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
