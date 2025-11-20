@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8100:8100"
+    volumes:
+      - ../../airflow/data:/data:ro
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "7861:7861"
+    environment:
+      - BACKEND_URL=http://backend:8100
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+networks:
+  default:
+    name: sodai_recsys_network

@@ -1,0 +1,22 @@
+[2025-11-20T00:24:37.373+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-20T00:24:37.412+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sodai_ml_pipeline.detect_drift manual__2025-11-20T00:22:08.323354+00:00 [queued]>
+[2025-11-20T00:24:37.420+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sodai_ml_pipeline.detect_drift manual__2025-11-20T00:22:08.323354+00:00 [queued]>
+[2025-11-20T00:24:37.421+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-11-20T00:24:37.448+0000] {taskinstance.py:2330} INFO - Executing <Task(BranchPythonOperator): detect_drift> on 2025-11-20 00:22:08.323354+00:00
+[2025-11-20T00:24:37.460+0000] {standard_task_runner.py:64} INFO - Started process 367 to run task
+[2025-11-20T00:24:37.465+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'sodai_ml_pipeline', 'detect_drift', 'manual__2025-11-20T00:22:08.323354+00:00', '--job-id', '183', '--raw', '--subdir', 'DAGS_FOLDER/sodai_ml_pipeline_dag.py', '--cfg-path', '/tmp/tmptjpek3kc']
+[2025-11-20T00:24:37.471+0000] {standard_task_runner.py:91} INFO - Job 183: Subtask detect_drift
+[2025-11-20T00:24:37.561+0000] {task_command.py:426} INFO - Running <TaskInstance: sodai_ml_pipeline.detect_drift manual__2025-11-20T00:22:08.323354+00:00 [running]> on host 9937dd56ecd4
+[2025-11-20T00:24:37.676+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='deep_drinkers' AIRFLOW_CTX_DAG_ID='sodai_ml_pipeline' AIRFLOW_CTX_TASK_ID='detect_drift' AIRFLOW_CTX_EXECUTION_DATE='2025-11-20T00:22:08.323354+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-20T00:22:08.323354+00:00'
+[2025-11-20T00:24:37.679+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-20T00:24:37.691+0000] {baseoperator.py:400} WARNING - BranchPythonOperator.execute cannot be called outside TaskInstance!
+[2025-11-20T00:24:38.425+0000] {logging_mixin.py:188} INFO - [DRIFT] ref_pos_rate=0.4724, new_pos_rate=0.0835, rel_change=0.8233, threshold=0.1000
+[2025-11-20T00:24:38.460+0000] {python.py:237} INFO - Done. Returned value was: retrain_model
+[2025-11-20T00:24:38.461+0000] {branch.py:36} INFO - Branch into retrain_model
+[2025-11-20T00:24:38.461+0000] {skipmixin.py:178} INFO - Following branch retrain_model
+[2025-11-20T00:24:38.483+0000] {skipmixin.py:246} INFO - Skipping tasks [('skip_retraining', -1)]
+[2025-11-20T00:24:38.511+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-20T00:24:38.537+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=sodai_ml_pipeline, task_id=detect_drift, run_id=manual__2025-11-20T00:22:08.323354+00:00, execution_date=20251120T002208, start_date=20251120T002437, end_date=20251120T002438
+[2025-11-20T00:24:38.645+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-11-20T00:24:38.674+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-20T00:24:38.677+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

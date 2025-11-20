@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount the directory that contains model artifacts on the host into /models
+      # Adjust the host path if your artifacts are elsewhere. This example uses
+      # the artifacts produced by the Airflow run in the repo at ../airflow/artifacts_entrega1/artifacts_optuna
+      - ../airflow/artifacts_entrega1/artifacts_optuna:/models:ro
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "7860:7860"
+    environment:
+      - BACKEND_URL=http://backend:8000
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+networks:
+  default:
+    name: sodai_app_network
