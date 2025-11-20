@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/samot/Downloads/Lab8/mlruns/252584985372938927/7625c90a2dee46d4aff3b47a75717427/artifacts
+end_time: 1761067576804
+entry_point_name: ''
+experiment_id: '252584985372938927'
+lifecycle_stage: active
+run_id: 7625c90a2dee46d4aff3b47a75717427
+run_name: industrious-squid-76
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761067547044
+status: 4
+tags: []
+user_id: samot

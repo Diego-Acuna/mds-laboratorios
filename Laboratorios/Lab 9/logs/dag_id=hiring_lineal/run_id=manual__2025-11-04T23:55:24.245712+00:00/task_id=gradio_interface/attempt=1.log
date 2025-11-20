@@ -1,0 +1,37 @@
+[2025-11-04T23:55:36.992+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-04T23:55:37.007+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hiring_lineal.gradio_interface manual__2025-11-04T23:55:24.245712+00:00 [queued]>
+[2025-11-04T23:55:37.010+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hiring_lineal.gradio_interface manual__2025-11-04T23:55:24.245712+00:00 [queued]>
+[2025-11-04T23:55:37.010+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-11-04T23:55:37.016+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): gradio_interface> on 2025-11-04 23:55:24.245712+00:00
+[2025-11-04T23:55:37.021+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hiring_lineal', 'gradio_interface', 'manual__2025-11-04T23:55:24.245712+00:00', '--job-id', '44', '--raw', '--subdir', 'DAGS_FOLDER/dag_lineal.py', '--cfg-path', '/tmp/tmpt4jn2p_a']
+[2025-11-04T23:55:37.023+0000] {standard_task_runner.py:91} INFO - Job 44: Subtask gradio_interface
+[2025-11-04T23:55:37.022+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=333) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-04T23:55:37.023+0000] {standard_task_runner.py:63} INFO - Started process 343 to run task
+[2025-11-04T23:55:37.047+0000] {task_command.py:426} INFO - Running <TaskInstance: hiring_lineal.gradio_interface manual__2025-11-04T23:55:24.245712+00:00 [running]> on host 5e9e36c5f12f
+[2025-11-04T23:55:37.090+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='hiring_lineal' AIRFLOW_CTX_TASK_ID='gradio_interface' AIRFLOW_CTX_EXECUTION_DATE='2025-11-04T23:55:24.245712+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-04T23:55:24.245712+00:00'
+[2025-11-04T23:55:37.091+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-04T23:55:37.303+0000] {logging_mixin.py:188} INFO - Running on local URL:  http://0.0.0.0:7860
+[2025-11-04T23:55:37.322+0000] {_client.py:1025} INFO - HTTP Request: GET http://localhost:7860/startup-events "HTTP/1.1 200 OK"
+[2025-11-04T23:55:37.707+0000] {_client.py:1025} INFO - HTTP Request: GET https://api.gradio.app/gradio-messaging/en "HTTP/1.1 200 OK"
+[2025-11-04T23:55:37.849+0000] {_client.py:1025} INFO - HTTP Request: GET https://checkip.amazonaws.com/ "HTTP/1.1 200 "
+[2025-11-04T23:55:38.189+0000] {_client.py:1025} INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+[2025-11-04T23:55:38.195+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/gradio/analytics.py:106 UserWarning: IMPORTANT: You are using gradio version 4.44.0, however version 4.44.1 is available, please upgrade.
+--------
+[2025-11-04T23:55:38.697+0000] {_client.py:1025} INFO - HTTP Request: HEAD http://localhost:7860/ "HTTP/1.1 200 OK"
+[2025-11-04T23:55:39.956+0000] {_client.py:1025} INFO - HTTP Request: GET https://api.gradio.app/v2/tunnel-request "HTTP/1.1 200 OK"
+[2025-11-04T23:55:40.353+0000] {_client.py:1025} INFO - HTTP Request: GET https://cdn-media.huggingface.co/frpc-gradio-0.2/frpc_linux_aarch64 "HTTP/1.1 403 Forbidden"
+[2025-11-04T23:55:40.360+0000] {logging_mixin.py:188} INFO - 
+Could not create share link. Missing file: /home/***/.local/lib/python3.12/site-packages/gradio/frpc_linux_aarch64_v0.2. 
+
+Please check your internet connection. This can happen if your antivirus software blocks the download of this file. You can install manually by following these steps: 
+
+1. Download this file: https://cdn-media.huggingface.co/frpc-gradio-0.2/frpc_linux_aarch64
+2. Rename the downloaded file to: frpc_linux_aarch64_v0.2
+3. Move the file to this location: /home/***/.local/lib/python3.12/site-packages/gradio
+[2025-11-04T23:55:40.364+0000] {logging_mixin.py:188} INFO - [gradio] Lanzado con share=True. Busca la URL *.gradio.live en el log.
+[2025-11-04T23:55:40.365+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-11-04T23:55:40.366+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-04T23:55:40.386+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=hiring_lineal, task_id=gradio_interface, run_id=manual__2025-11-04T23:55:24.245712+00:00, execution_date=20251104T235524, start_date=20251104T235537, end_date=20251104T235540
+[2025-11-04T23:55:40.414+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-11-04T23:55:40.430+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-04T23:55:40.431+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

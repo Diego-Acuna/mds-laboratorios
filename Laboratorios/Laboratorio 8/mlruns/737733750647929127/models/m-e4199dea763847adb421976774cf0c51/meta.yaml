@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Users/samot/Downloads/Lab8/mlruns/737733750647929127/models/m-e4199dea763847adb421976774cf0c51/artifacts
+creation_timestamp: 1761070067336
+experiment_id: '737733750647929127'
+last_updated_timestamp: 1761070071621
+model_id: m-e4199dea763847adb421976774cf0c51
+model_type: null
+name: model
+source_run_id: fb12f67ee2614c8894687a0193dde79a
+status: 2
+status_message: null

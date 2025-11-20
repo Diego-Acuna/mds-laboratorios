@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/samot/Downloads/Lab8/mlruns/252584985372938927/1d46b06f94c64c57a9d45faa9b2db2ec/artifacts
+end_time: 1761066446788
+entry_point_name: ''
+experiment_id: '252584985372938927'
+lifecycle_stage: active
+run_id: 1d46b06f94c64c57a9d45faa9b2db2ec
+run_name: overjoyed-stork-17
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761066446708
+status: 4
+tags: []
+user_id: samot

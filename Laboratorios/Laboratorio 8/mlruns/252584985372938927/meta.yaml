@@ -1,0 +1,6 @@
+artifact_location: file:///c:/Users/samot/Downloads/Lab8/mlruns/252584985372938927
+creation_time: 1761066353985
+experiment_id: '252584985372938927'
+last_update_time: 1761066353985
+lifecycle_stage: active
+name: XGBoost_Optimization_Experiment

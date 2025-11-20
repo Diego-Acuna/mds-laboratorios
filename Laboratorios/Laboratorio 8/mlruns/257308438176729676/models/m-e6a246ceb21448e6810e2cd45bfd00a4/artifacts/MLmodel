@@ -1,0 +1,22 @@
+artifact_path: file:///C:/Users/samot/Downloads/Lab8/mlruns/257308438176729676/models/m-e6a246ceb21448e6810e2cd45bfd00a4/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.5
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.4.2
+mlflow_version: 3.5.0
+model_id: m-e6a246ceb21448e6810e2cd45bfd00a4
+model_size_bytes: 367569
+model_uuid: m-e6a246ceb21448e6810e2cd45bfd00a4
+prompts: null
+run_id: 310140668e8c4a75ae07cb65522470c3
+utc_time_created: '2025-10-21 19:54:09.934932'

@@ -1,0 +1,21 @@
+[2025-11-04T23:05:44.778+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-04T23:05:44.794+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hiring_lineal.download_data manual__2025-11-04T23:05:40.492679+00:00 [queued]>
+[2025-11-04T23:05:44.798+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hiring_lineal.download_data manual__2025-11-04T23:05:40.492679+00:00 [queued]>
+[2025-11-04T23:05:44.798+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-11-04T23:05:44.803+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): download_data> on 2025-11-04 23:05:40.492679+00:00
+[2025-11-04T23:05:44.811+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hiring_lineal', 'download_data', 'manual__2025-11-04T23:05:40.492679+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/dag_lineal.py', '--cfg-path', '/tmp/tmp_5qsqyqz']
+[2025-11-04T23:05:44.814+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1087) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-04T23:05:44.814+0000] {standard_task_runner.py:91} INFO - Job 5: Subtask download_data
+[2025-11-04T23:05:44.814+0000] {standard_task_runner.py:63} INFO - Started process 1097 to run task
+[2025-11-04T23:05:44.847+0000] {task_command.py:426} INFO - Running <TaskInstance: hiring_lineal.download_data manual__2025-11-04T23:05:40.492679+00:00 [running]> on host f3b403659f43
+[2025-11-04T23:05:44.908+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='hiring_lineal' AIRFLOW_CTX_TASK_ID='download_data' AIRFLOW_CTX_EXECUTION_DATE='2025-11-04T23:05:40.492679+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-04T23:05:40.492679+00:00'
+[2025-11-04T23:05:44.910+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-04T23:05:44.916+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-04T23:05:44.917+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', "mkdir -p /opt/***/dags/runs/20251104/raw && curl -L --fail --silent --show-error -o /opt/***/dags/runs/20251104/raw/data_1.csv 'https://gitlab.com/eduardomoyab/laboratorio-13/-/raw/main/files/data_1.csv'"]
+[2025-11-04T23:05:44.927+0000] {subprocess.py:86} INFO - Output:
+[2025-11-04T23:05:45.353+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-11-04T23:05:45.355+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-04T23:05:45.388+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=hiring_lineal, task_id=download_data, run_id=manual__2025-11-04T23:05:40.492679+00:00, execution_date=20251104T230540, start_date=20251104T230544, end_date=20251104T230545
+[2025-11-04T23:05:45.423+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-11-04T23:05:45.443+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-11-04T23:05:45.444+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
